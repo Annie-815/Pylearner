@@ -23,7 +23,10 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-(rk&@caf!l*6%+
 # === SECURITY ===
 DEBUG = False  # Always False in production
 
-ALLOWED_HOSTS = ["your-app-name.onrender.com"]  # Replace with your real domain or Render app URL
+ALLOWED_HOSTS = ['pylearner.onrender.com', 'localhost', '127.0.0.1']
+
+# ALLOWED_HOSTS = [os.environ.get("RENDER_EXTERNAL_HOSTNAME", "127.0.0.1")]
+
 
 # === APPLICATIONS ===
 INSTALLED_APPS = [
