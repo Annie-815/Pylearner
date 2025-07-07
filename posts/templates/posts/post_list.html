@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block  title %}
+    Posts
+{% endblock  %}
+
+{% block content %}
+    <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<section class="posts-section">
+    <h1 class="animate__animated animate__fadeInDown">🐍 Python Begginer Concepts</h1>
+
+    {% for post in posts %}
+        <article class="post-card animate__animated animate__fadeInUp animate__delay-{{ forloop.counter }}00ms">
+            <h2>
+                <a href="{% url 'posts:page' slug=post.slug %}" class="post-link">
+                    {{ post.title }}
+                </a>
+            </h2>
+            <p class="post-date">{{ post.date|date:"F j, Y" }}</p>
+        </article>
+    {% empty %}
+        <p>No posts found.</p>
+    {% endfor %}
+</section>
+
+{% endblock  %}

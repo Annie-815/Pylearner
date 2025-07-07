@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block content %}
+
+<!-- Animate.css for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<section class="about-section animate__animated animate__fadeIn">
+    <h1 class="animate__animated animate__fadeInDown">👋 About Us</h1>
+
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+        Welcome to <strong class="brand">PyLearner</strong>! We're a small, dedicated team passionate about teaching Python in a fun and accessible way.
+    </p>
+
+    <p class="animate__animated animate__fadeInUp animate__delay-2s">
+        Our mission is to create engaging, beginner-friendly content that helps learners go from zero to confident Python developers.
+    </p>
+
+    <p class="animate__animated animate__fadeInUp animate__delay-3s">
+        Whether you're a total newbie or brushing up on skills, you're in the right place. Let’s learn Python the smart way — together!
+    </p>
+
+    <div class="about-icons animate__animated animate__fadeInUp animate__delay-4s">
+        <span>🐍 Python</span>
+        <span>💻 Web Dev</span>
+        <span>🧠 Data Science</span>
+        <span>🚀 Projects</span>
+    </div>
+</section>
+
+{% endblock %}

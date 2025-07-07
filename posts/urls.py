@@ -1,0 +1,12 @@
+from django.urls import path
+from . import views
+
+app_name = "posts"
+
+urlpatterns = [    
+    path('', views.post_list, name="list"),
+    path('new-post/', views.create_post, name="new-post"),
+    path('<slug:slug>', views.post_page, name="page"),
+
+
+]

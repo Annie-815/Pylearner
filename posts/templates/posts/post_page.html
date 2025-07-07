@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load markdown_extras %}
+
+{% block  title %}
+    {{ post.title}}
+{% endblock  %}
+
+{% block content %}
+    <section>
+        <img xlass= " banner "src="{{ post.banner.url }}" alt="{{ post.title }}"/>
+        <h1>{{ post.title }} </h1>             
+        <p>{{ post.date }}</p>
+        {% comment %} <p>{{ post.body }}</p>      {% endcomment %}
+        
+        <div class="lesson-body">
+            {{ post.body|markdownify }}
+
+        </div>
+    </section>
+
+{% endblock  %}  

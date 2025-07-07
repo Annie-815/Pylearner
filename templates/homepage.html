@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block  title %}
+     Learn Python - Home
+{% endblock  %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="hero-section animate__animated animate__fadeIn">
+        <div class="hero-content">
+            <h1>Welcome to <span class="brand">PyLearner</span></h1>
+            <p>Master Python from zero to hero with interactive lessons, real-world projects, and community support.</p>
+            <a href="{% url 'posts:list' %}" class="cta-button">Start Learning Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/python-hero.svg' %}" alt="Learn Python Illustration">
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature animate__animated animate__fadeInUp animate__delay-1s">
+            <h3>👶 Beginner Friendly</h3>
+            <p>Start with basic Python concepts like variables, loops, and functions.</p>
+        </div>
+        <div class="feature animate__animated animate__fadeInUp animate__delay-2s">
+            <h3>🛠 Build Projects</h3>
+            <p>Create calculators, websites, games, and data science apps.</p>
+        </div>
+        <div class="feature animate__animated animate__fadeInUp animate__delay-3s">
+            <h3>💼 Career-Ready</h3>
+            <p>Gain skills needed for backend development and data science jobs.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Why Choose PyLearner?</h2>
+        <p>Our mission is to help aspiring developers learn Python through fun, practical, and modern lessons. Whether you're just getting started or brushing up your skills, we’ve got something for you.</p>
+    </section>
+
+{% endblock  %}
